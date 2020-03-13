@@ -12,7 +12,13 @@ If you are setting up a fresh machine, it is recommended that you secure it firs
 
 First make sure you are actually logging in to the server using keys and not via a password, otherwise this will lock you out. Many hosting providers support uploading a public key and automatically set up key-based root login on new machines for you.
 
-Edit `/etc/ssh/sshd_config` and find `PasswordAuthentication`. Make sure it’s uncommented and set to `no`. If you made any changes, restart sshd:
+Edit `/etc/ssh/sshd_config` and find `PasswordAuthentication` :
+
+`sudo edit /etc/ssh/sshd_config`
+
+Make sure it’s uncommented and set to `no`. If you made any changes, restart sshd:
+
+`sudo systemctl restart sshd`
 
 ## Update system packages
 
