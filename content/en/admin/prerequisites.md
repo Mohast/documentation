@@ -17,12 +17,16 @@ Edit `/etc/ssh/sshd_config` and find `PasswordAuthentication`. Make sure it’s 
 ## Update system packages
 
 ```bash
-apt update && apt upgrade -y
+sudo apt update && sudo apt upgrade -y
 ```
 
 ## Install fail2ban so it blocks repeated login attempts
 
-Edit `/etc/fail2ban/jail.local` and put this inside:
+First install fail2ban :
+
+`sudo apt-get install fail2ban`
+
+Then, edit `/etc/fail2ban/jail.local` and put this inside:
 
 ```text
 [DEFAULT]
